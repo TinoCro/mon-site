@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris - La Ville Lumière</title>
+    <style>
+        /* Style général */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            color: #ffcc00;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête avec image de fond -->
+    <header>
+        <h1>Paris</h1>
+        <p class="subtitle">La Ville Lumière</p>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#histoire">Histoire</a></li>
+            <li><a href="#monuments">Monuments</a></li>
+            <li><a href="#culture">Culture</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <div class="container">
+        <!-- Section Histoire -->
+        <section id="histoire" class="card">
+            <div class="card-content">
+                <h2>Histoire de Paris</h2>
+                <p>Fondée au IIIe siècle av. J.-C. par les Parisii, un peuple gaulois, Paris s'est développée pour devenir l'une des villes les plus importantes du monde. Capitale de la France depuis le VIe siècle, elle a joué un rôle majeur dans l'histoire politique, culturelle et artistique du pays.</p>
+                <p>Au XIXe siècle, sous l'impulsion du Baron Haussmann, Paris a connu une transformation urbaine majeure qui a donné à la ville son visage actuel avec ses larges boulevards et ses immeubles caractéristiques.</p>
+            </div>
+        </section>
+        
+        <!-- Section Monuments -->
+        <section id="monuments" class="card">
+            <div class="card-content">
+                <h2>Monuments Emblématiques</h2>
+                <div class="monuments-grid">
+                    <article>
+                        <h3>La Tour Eiffel</h3>
+                        <p>Construite par Gustave Eiffel pour l'Exposition Universelle de 1889, c'est le symbole de Paris avec ses 324 mètres de hauteur.</p>
+                    </article>
+                    <article>
+                        <h3>Notre-Dame de Paris</h3>
+                        <p>Chef-d'œuvre de l'architecture gothique, cette cathédrale du XIIe siècle est un monument historique classé au patrimoine mondial de l'UNESCO.</p>
+                    </article>
+                    <article>
+                        <h3>L'Arc de Triomphe</h3>
+                        <p>Commandé par Napoléon en 1806, il domine l'avenue des Champs-Élysées et offre une vue panoramique sur Paris.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Culture -->
+        <section id="culture" class="card">
+            <div class="card-content">
+                <h2>Culture Parisienne</h2>
+                <p>Paris est réputée pour sa vie culturelle riche :</p>
+                <ul>
+                    <li>Musées mondialement connus (Louvre, Orsay, Centre Pompidou)</li>
+                    <li>Théâtres prestigieux (Opéra Garnier, Comédie Française)</li>
+                    <li>Scène gastronomique exceptionnelle (bistrots, restaurants étoilés)</li>
+                    <li>Événements culturels (Nuit Blanche, Paris Plages, Fashion Week)</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Galerie d'images -->
+        <section id="galerie" class="card">
+            <h2 style="padding: 0 20px;">Galerie Photo</h2>
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Tour Eiffel">
+            <div class="card-content">
+                <img src="https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Seine et Notre-Dame">
+                <img src="images/arc.jpg" alt="Arc de Triomphe">
+            </div>
+        </section>
+    </div>
+    
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2023 - Étudiant Tino Franic - Projet Site HTML sur Paris</p>
+        <p>Sources images : Unsplash</p>
+    </footer>
+</body>
+</html>
