@@ -16,8 +16,9 @@
         }
         
         header {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/paris.jpg');
             background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
             padding: 100px 20px;
@@ -26,16 +27,21 @@
         h1 {
             font-size: 3em;
             margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         
         .subtitle {
             font-size: 1.2em;
             font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
         
         nav {
             background-color: #333;
             padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         
         nav ul {
@@ -43,6 +49,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
+            margin: 0;
         }
         
         nav li {
@@ -53,6 +60,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
         }
         
         nav a:hover {
@@ -71,16 +79,44 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
             overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         
         .card img {
             width: 100%;
             height: 300px;
             object-fit: cover;
+            display: block;
         }
         
         .card-content {
             padding: 20px;
+        }
+        
+        .monuments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
         }
         
         footer {
@@ -99,6 +135,18 @@
             
             nav li {
                 margin: 10px 0;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header {
+                padding: 60px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
             }
         }
     </style>
@@ -168,10 +216,10 @@
         
         <!-- Galerie d'images -->
         <section id="galerie" class="card">
-            <h2 style="padding: 0 20px;">Galerie Photo</h2>
+            <h2 style="padding: 20px; margin: 0;">Galerie Photo</h2>
             <img src="images/tour.jpg" alt="Tour Eiffel">
-            <div class="card-content">
-                <img src="images/dame.jpg" alt="Notre-Dame">
+            <div class="gallery-grid">
+                <img src="images/dame.jpg" alt="Notre-Dame de Paris">
                 <img src="images/arc.jpg" alt="Arc de Triomphe">
             </div>
         </section>
